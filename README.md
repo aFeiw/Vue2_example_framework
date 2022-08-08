@@ -1,2 +1,2 @@
 # Vue2_example_framework
-这是关于vue2的示例框架内容
+vue2的示例框架内容等
