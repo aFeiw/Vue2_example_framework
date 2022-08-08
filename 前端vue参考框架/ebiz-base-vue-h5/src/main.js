@@ -30,7 +30,12 @@ if (envFlag != 'prd') {
   eruda.init()
   //打印当前环境相关信息
   // eslint-disable-next-line no-console
-  console.table({ 当前环境: envFlag, api请求地址: Config.apiDomain, 静态资源地址: Config.assetsUrl, url根地址: Config.rootUrl })
+  console.table({
+    当前环境: envFlag,
+    api请求地址: Config.apiDomain,
+    静态资源地址: Config.assetsUrl,
+    url根地址: Config.rootUrl,
+  })
   Vue.config.devtools = true
 } else {
   Vue.config.devtools = false
@@ -39,11 +44,11 @@ if (envFlag != 'prd') {
 }
 
 // 注册过滤器
-Object.keys(Filters).forEach(function(k) {
+Object.keys(Filters).forEach(function (k) {
   Vue.filter(k, Filters[k])
 })
 
-//权限控制
+//权限 控制
 import { permission } from '@/assets/js/utils/permission'
 permission()
 
@@ -54,5 +59,5 @@ Vue.config.productionTip = false
 new Vue({
   router: Router,
   store: Store,
-  render: h => h(App)
+  render: (h) => h(App),
 }).$mount('#app')
