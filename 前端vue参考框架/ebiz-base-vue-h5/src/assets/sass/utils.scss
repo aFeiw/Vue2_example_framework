@@ -1,0 +1,138 @@
+//浮动、清除浮动
+.clearfix {
+  @include clearfix;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+
+//字体相关
+.fs12 {
+  font-size: $font-size-small;
+}
+.fs14 {
+  font-size: $font-size-base;
+}
+.fs16 {
+  font-size: $font-size-large;
+}
+.fs18 {
+  font-size: $font-size-xl;
+}
+.fw600 {
+  font-weight: 600 !important;
+}
+.fwb {
+  font-weight: bold !important;
+}
+
+//布局定位
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.mh-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.hide {
+  visibility: hidden !important;
+}
+.hidden {
+  display: none !important;
+}
+.flex {
+  display: -webkit-flex;
+  display: flex;
+}
+.inline-flex {
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+.inline-b {
+  display: inline-block !important;
+}
+.justify-content-c {
+  justify-content: center;
+}
+.align-items-c {
+  align-items: center;
+}
+
+// 常用文字颜色
+.c-gray-base {
+  color: $gray-base !important;
+}
+.c-gray-dark {
+  color: $gray-dark !important;
+}
+.c-gray-darker {
+  color: $gray-darker !important;
+}
+
+// 文字位置设置
+.text-left {
+  text-align: left !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-underline {
+  text-decoration: underline;
+}
+
+// 垂直方向对齐方式
+.v-top {
+  vertical-align: top !important;
+}
+.v-middle {
+  vertical-align: middle !important;
+}
+.v-bottom {
+  vertical-align: bottom !important;
+}
+.v-baseline {
+  vertical-align: baseline !important;
+}
+
+//单行省略
+.ellipsis {
+  @include text-overflow;
+}
+
+//颜色
+.green {
+  color: $green !important;
+}
+.red {
+  color: $red !important;
+}
+.yellow {
+  color: $yellow !important;
+}
+.gray {
+  color: $gray !important;
+}
+.white {
+  color: $white !important;
+}
+.bg-black {
+  background: $black !important;
+}
+.bg-white {
+  background: $white !important;
+}
+.bg-none {
+  background-color: transparent !important;
+}

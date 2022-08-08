@@ -1,0 +1,43 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './utils.scss';
+@import './transition.scss';
+@import './vant-ui.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  background-color: #f1f1f1;
+}
+
+html {
+  height: 100%;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+// 宽度设置
+@include set-width($width-list);
+// 宽度设置
+@include set-height($width-list);
+// 间距设置
+@include set-distance($distance-class-list, $distance-list);
+//圆角弧度设置
+@include set-radius($radius);
+//透明度设置
+@include set-opacity($opacity);

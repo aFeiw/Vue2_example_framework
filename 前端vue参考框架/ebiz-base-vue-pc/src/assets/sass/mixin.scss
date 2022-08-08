@@ -1,0 +1,210 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin scrollBar {
+  &::-webkit-scrollbar-track-piece {
+    background: #d3dce6;
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #99a9bf;
+    border-radius: 20px;
+  }
+}
+
+@mixin relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+// 设置宽度
+@mixin set-width($width-list) {
+  @each $size in $width-list {
+    .w#{$size} {
+      width: #{$size}px !important;
+    }
+  }
+}
+
+// 设置高度
+@mixin set-height($width-list) {
+  @each $size in $width-list {
+    .h#{$size} {
+      height: #{$size}px !important;
+    }
+  }
+}
+
+// 设置圆角弧度
+@mixin set-radius($radius) {
+  @each $size in $radius {
+    .radius#{$size} {
+      border-radius: #{$size}px !important;
+    }
+  }
+}
+
+// 设置透明度
+@mixin set-opacity($opacity) {
+  @each $size in $opacity {
+    .opacity#{$size*10} {
+      opacity: #{$size} !important;
+    }
+  }
+}
+
+// 外边距
+@mixin margin($size) {
+  margin: $size !important;
+}
+
+@mixin margin-vertical($size) {
+  margin-top: $size !important;
+  margin-bottom: $size !important;
+}
+
+@mixin margin-horizontal($size) {
+  margin-left: $size !important;
+  margin-right: $size !important;
+}
+
+@mixin margin-top($size) {
+  margin-top: $size !important;
+}
+
+@mixin margin-left($size) {
+  margin-left: $size !important;
+}
+
+@mixin margin-bottom($size) {
+  margin-bottom: $size !important;
+}
+
+@mixin margin-right($size) {
+  margin-right: $size !important;
+}
+
+// 内边距
+@mixin padding($size) {
+  padding: $size !important;
+}
+
+@mixin padding-vertical($size) {
+  padding-top: $size !important;
+  padding-bottom: $size !important;
+}
+
+@mixin padding-horizontal($size) {
+  padding-left: $size !important;
+  padding-right: $size !important;
+}
+
+@mixin padding-top($size) {
+  padding-top: $size !important;
+}
+
+@mixin padding-left($size) {
+  padding-left: $size !important;
+}
+@mixin padding-bottom($size) {
+  padding-bottom: $size !important;
+}
+
+@mixin padding-right($size) {
+  padding-right: $size !important;
+}
+
+@mixin top($size) {
+  top: $size !important;
+}
+
+@mixin left($size) {
+  left: $size !important;
+}
+
+@mixin right($size) {
+  right: $size !important;
+}
+
+@mixin bottom($size) {
+  bottom: $size !important;
+}
+
+// 设置内外边距
+@mixin set-distance($distance-class-list, $distance-list) {
+  @each $class-name in $distance-class-list {
+    @each $size in $distance-list {
+      .#{$class-name}#{$size} {
+        @if $class-name == m {
+          @include margin(#{$size}px);
+        }
+        @if $class-name == mv {
+          @include margin-vertical(#{$size}px);
+        }
+        @if $class-name == mh {
+          @include margin-horizontal(#{$size}px);
+        }
+        @if $class-name == mt {
+          @include margin-top(#{$size}px);
+        }
+        @if $class-name == ml {
+          @include margin-left(#{$size}px);
+        }
+        @if $class-name == mr {
+          @include margin-right(#{$size}px);
+        }
+        @if $class-name == mb {
+          @include margin-bottom(#{$size}px);
+        }
+        @if $class-name == p {
+          @include padding(#{$size}px);
+        }
+        @if $class-name == pv {
+          @include padding-vertical(#{$size}px);
+        }
+        @if $class-name == ph {
+          @include padding-horizontal(#{$size}px);
+        }
+        @if $class-name == pt {
+          @include padding-top(#{$size}px);
+        }
+        @if $class-name == pl {
+          @include padding-left(#{$size}px);
+        }
+        @if $class-name == pr {
+          @include padding-right(#{$size}px);
+        }
+        @if $class-name == pb {
+          @include padding-bottom(#{$size}px);
+        }
+        @if $class-name == top {
+          @include top(#{$size}px);
+        }
+        @if $class-name == left {
+          @include left(#{$size}px);
+        }
+        @if $class-name == right {
+          @include right(#{$size}px);
+        }
+        @if $class-name == bottom {
+          @include bottom(#{$size}px);
+        }
+      }
+    }
+  }
+}
+
+//单行省略
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

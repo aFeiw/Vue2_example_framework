@@ -1,0 +1,174 @@
+//浮动、清除浮动
+.clearfix{@include clearfix;}
+.fl{float:left;}
+.fr{float:right;}
+
+//字体相关
+.fs12{
+  font-size: 12px;
+}
+.fs14{
+  font-size: 14px;
+}
+.fs16{
+  font-size: 16px;
+}
+.fs18{
+  font-size: 18px;
+}
+.fs20{
+  font-size: 20px;
+}
+.fs22{
+  font-size: 22px;
+}
+.fw600{
+    font-weight:600!important;
+}
+.fwb{
+    font-weight:bold!important;
+}
+
+//布局定位
+.relative{
+  position: relative;
+}
+.absolute{
+  position: absolute;
+}
+.fixed{
+  position: fixed;
+}
+.mh-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+.hide {
+	visibility: hidden!important;
+}
+.hidden {
+	display: none!important;
+}
+.flex{
+	display: -webkit-flex;
+  	display: flex;
+}
+.inline-flex{
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+.inline-b{
+	display:inline-block !important;
+}
+.justify-content-c{
+  justify-content: center;
+}
+.align-items-c{
+  align-items: center;
+}
+
+// 背景色
+.bg-white {
+	background-color: $white!important;
+}
+.bg-none {
+	background-color: transparent!important;
+}
+
+
+// 文字颜色
+.c-gray-darker {
+	color: #000000;
+}
+.c-gray-dark {
+	color: #4A4A4A;
+}
+.c-gray-base {
+	color: #666666;
+}
+.c-gray-light {
+	color: #9E9E9E;
+}
+.c-gray-lighter {
+	color: #B1B1B1;
+}
+.c-blue-base {
+	color: #0069B7;
+}
+.c-blue-light {
+	color: #78A6DC;
+}
+.c-gray{
+	color: #DEDCDC;
+}
+
+// 文字位置设置
+.text-left {
+	text-align: left!important;
+}
+.text-right {
+	text-align: right!important;
+}
+.text-center {
+	text-align: center!important;
+}
+.text-underline {
+	text-decoration: underline;
+}
+
+// 垂直方向对齐方式
+.v-top{
+	vertical-align:top!important;
+}
+.v-middle{
+	vertical-align:middle!important;
+}
+.v-bottom{
+	vertical-align:bottom!important;
+}
+.v-baseline{
+	vertical-align:baseline!important;
+}
+
+//单行省略
+.ellipsis{
+	@include text-overflow;
+}
+
+//颜色
+.green{
+	color:$green!important;
+}
+.red{
+	color:$red!important;
+}
+.yellow{
+	color:$yellow!important;
+}
+.gray{
+	color:$gray!important;
+}
+.white{
+	color:$white!important;
+}
+.bg-black{
+  background:$black!important;
+}
+.bg-white{
+  background:$white!important;
+}
+
+
+// 设置光标样式
+.pointer {
+	cursor: pointer!important;
+}
+
+.cursor-default {
+  cursor: default!important;
+}
+
+// 设置符合ui边线
+.border-ui{
+  border:1px solid #ebeef5;
+}
